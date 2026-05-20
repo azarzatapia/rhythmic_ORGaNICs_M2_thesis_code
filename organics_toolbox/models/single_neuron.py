@@ -10,17 +10,17 @@ class SingleNeuronModel(ORGaNICsBaseModel):
 
     def __init__(
         self,
-        tau_v=2,
-        tau_a=1,
-        tau_u=2,
+        tau_v=1,
+        tau_a=2,
+        tau_u=10,
         sigma=0.1,
-        b0=0.5,
+        b0=0.2,
         w_in=1.0,
-        w_rec=0.0,
+        w_rec=1.0,
     ):
         Wzx = np.array([[w_in]])      # input→neuron
         Wyy = np.array([[w_rec]])     # recurrent
-        Wnorm = np.array([[1.0]])     # trivial norm
+        Wnorm = np.array([[1.0]])
 
         params = FullParams(
             N=1,
