@@ -3,10 +3,6 @@ from organics_toolbox.core.solvers import simulate_ode
 from organics_toolbox.core.organics_dynamics import organics
 
 class ORGaNICsBaseModel:
-    """
-    Base class for ORGaNICs models.
-    Holds parameters and exposes a generic simulate() method.
-    """
 
     def __init__(self, params):
         self.params = params

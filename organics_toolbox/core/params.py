@@ -5,10 +5,10 @@ import numpy as np
 @dataclass
 class FullParams:
  
-    N: int                 # number of neurons
-    Wzx: np.ndarray        # input → population
-    Wyy: np.ndarray        # recurrent → population
-    Wnorm: np.ndarray      # normalization matrix
+    N: int
+    Wzx: np.ndarray
+    Wyy: np.ndarray
+    Wnorm: np.ndarray
 
     tau_v: float
     tau_a: float
