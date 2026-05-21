@@ -1,18 +1,6 @@
 import numpy as np
 
 class MakeMatrices:
-    """
-    Key design choices:
-    - Orientation sampling resolution: deltaTheta = pi/(theta_res_factor*Ntheta)
-      and theta spans [-pi/2, pi/2).
-    - Spatial RF centers count: Nxi_full = Nxi_base * overlap_xi (David: 100*overlapXi)
-    - Spatial sampling resolution: deltaXi = pi/(xi_res_factor*Nxi_full)
-      and xi spans [-pi, pi).
-    - Build spatial RFs and Wxi on the FULL circular domain, then apply cortical magnification
-      warp to axes, then crop rows/cols by FOV (in radians).
-    - Orientation RFs normalized by sqrt(mean(sum(rf^2))) (L2-energy style).
-    - Spatial RFs normalized by mean(sum(rf)) (row-sum mean).
-    """
 
     def __init__(
         self,

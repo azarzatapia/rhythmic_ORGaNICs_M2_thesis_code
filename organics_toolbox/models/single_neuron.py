@@ -3,10 +3,7 @@ from organics_toolbox.core.params import FullParams
 from .base import ORGaNICsBaseModel
 
 class SingleNeuronModel(ORGaNICsBaseModel):
-    """
-    A minimal 1-neuron ORGaNICs model.
-    Good for debugging dynamics, tuning parameters, etc.
-    """
+
 
     def __init__(
         self,
